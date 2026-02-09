@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Reshma Industries | M-Sand, P-Sand & Bricks | Tiruchirappalli</title>
+  <meta name="description" content="Reshma Industries (Est. 1986) supplies premium M-Sand, P-Sand, interlock bricks and red bricks in Tiruchirappalli and across Tamil Nadu. Fast dispatch, consistent quality, and construction consultation." />
+  <meta name="theme-color" content="#efe4d3" />
+
+  <meta property="og:title" content="Reshma Industries" />
+  <meta property="og:description" content="Premium construction materials. Reliable dispatch. Est. 1986." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN for GitHub Pages -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            soft: '0 18px 50px rgba(35, 46, 56, 0.18)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --sand-50: #f7f2ea;
+      --sand-100: #efe4d3;
+      --sand-200: #e4d2bb;
+      --ink-900: #1d2a30;
+      --ink-700: #3a4a55;
+      --cyan-500: #2aa6b3;
+      --cyan-700: #1f7c87;
+      --orange-500: #d98935;
+      --orange-600: #c77726;
+      --shadow: 0 18px 45px rgba(35, 46, 56, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background:
+        radial-gradient(circle at 15% 10%, rgba(42, 166, 179, 0.12), transparent 42%),
+        radial-gradient(circle at 85% 0%, rgba(217, 137, 53, 0.16), transparent 48%),
+        linear-gradient(180deg, #f7f2ea 0%, #f2e8d9 45%, #f7f2ea 100%);
+      color: var(--ink-900);
+      font-family: "Sora", "Segoe UI", sans-serif;
+    }
+
+    h1, h2, h3, .display-font {
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    :focus-visible { outline: 3px solid rgba(42, 166, 179, 0.5); outline-offset: 2px; }
+
+    .grain {
+      background-image:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,.55), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,.45), transparent 45%),
+        radial-gradient(circle at 30% 80%, rgba(255,255,255,.4), transparent 50%),
+        radial-gradient(circle at 90% 85%, rgba(255,255,255,.5), transparent 55%);
+      opacity: 0.7;
+    }
+
+    .surface {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(32, 40, 48, 0.08);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .surface-soft {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(32, 40, 48, 0.08);
+      border-radius: 24px;
+    }
+
+    .surface-tint {
+      background: rgba(42, 166, 179, 0.08);
+      border: 1px solid rgba(42, 166, 179, 0.2);
+      border-radius: 24px;
+    }
+
+    .modal-surface {
+      background: #fbf6ee;
+      border: 1px solid rgba(32, 40, 48, 0.12);
+      border-radius: 24px;
+      box-shadow: 0 22px 60px rgba(29, 42, 48, 0.22);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .chip-cyan {
+      background: rgba(42, 166, 179, 0.15);
+      color: #0f4b55;
+      border: 1px solid rgba(42, 166, 179, 0.4);
+    }
+
+    .chip-orange {
+      background: rgba(217, 137, 53, 0.16);
+      color: #6a3b0a;
+      border: 1px solid rgba(217, 137, 53, 0.35);
+    }
+
+    .chip-sand {
+      background: rgba(30, 42, 48, 0.08);
+      color: #33424c;
+      border: 1px solid rgba(30, 42, 48, 0.18);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 16px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--ink-900);
+      color: #f7f2ea;
+      box-shadow: 0 10px 25px rgba(29, 42, 48, 0.18);
+    }
+
+    .btn-primary:hover { background: #22343c; }
+
+    .btn-accent {
+      background: var(--orange-500);
+      color: #1a1206;
+      box-shadow: 0 10px 24px rgba(217, 137, 53, 0.3);
+    }
+
+    .btn-accent:hover { background: var(--orange-600); }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--ink-900);
+      border: 1px solid rgba(32, 40, 48, 0.12);
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover { background: #fff7ed; }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink-900);
+      border: 1px solid rgba(32, 40, 48, 0.2);
+      box-shadow: none;
+    }
+
+    .btn-soft {
+      background: rgba(42, 166, 179, 0.12);
+      color: #0f4b55;
+      border: 1px solid rgba(42, 166, 179, 0.28);
+      box-shadow: none;
+    }
+
+    .btn-small {
+      padding: 0.5rem 0.9rem;
+      border-radius: 12px;
+      font-size: 0.875rem;
+    }
+
+    .product-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(27, 36, 44, 0.16);
+    }
+
+    .rise-in { animation: rise-in 0.9s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    .floaty { animation: float 6s ease-in-out infinite alternate; }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-12px); }
+    }
+
+    /* Prevent iOS input zoom */
+    input, select, textarea { font-size: 16px; }
+  </style>
+</head>
+
+<body class="text-[#1d2a30] antialiased">
+
+  <!-- Config constants in HTML for easy edits later -->
+  <script>
+    // WhatsApp Click-to-Chat number (digits-only format for wa.me)
+    window.RI_WA_PHONE = '919442229769';
+  </script>
+
+  <!-- Top strip -->
+  <div class="hidden md:block bg-[#efe4d3]/90 border-b border-[#d8c7b3]">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between text-sm text-[#4b5a64]">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#2aa6b3]"></span>
+          Dispatch ready • Est. 1986
+        </span>
+        <span class="text-[#b59f86]">|</span>
+        <span>Serving Tiruchirappalli and Tamil Nadu</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-[#1d2a30]" href="tel:+919442229769">Call: +91 94422 29769</a>
+        <a class="hover:text-[#1d2a30]" href="mailto:contact@reshmaindustries.com">contact@reshmaindustries.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-[#f7f2ea]/85 border-b border-[#dac9b6]">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3" aria-label="Reshma Industries home">
+        <div class="w-11 h-11 rounded-2xl bg-white/80 border border-[#eadfce] shadow-soft flex items-center justify-center overflow-hidden">
+          <img src="logo.png" alt="Reshma Industries logo" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <div class="text-lg font-semibold">Reshma Industries</div>
+          <div class="text-xs text-[#5c6a74]">Premium construction materials • Est. 1986</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-[#3a4a55]">
+        <a class="hover:text-[#1f7c87]" href="#products">Products</a>
+        <a class="hover:text-[#1f7c87]" href="#why">Why us</a>
+        <a class="hover:text-[#1f7c87]" href="#legacy">Legacy</a>
+        <a class="hover:text-[#1f7c87]" href="#consultation">Consultation</a>
+        <a class="hover:text-[#1f7c87]" href="#contact">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <button data-open-modal data-action="Quote" class="btn btn-secondary">Get a quote</button>
+        <button data-open-modal data-action="Order" class="btn btn-accent">Place order</button>
+      </div>
+
+      <button id="mobileBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/70 border border-[#dac9b6]" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-[#dbcab7] bg-[#f7f2ea]/95">
+      <div class="max-w-6xl mx-auto px-4 py-4 grid gap-3 text-sm text-[#3a4a55]">
+        <a class="hover:text-[#1f7c87]" href="#products">Products</a>
+        <a class="hover:text-[#1f7c87]" href="#why">Why us</a>
+        <a class="hover:text-[#1f7c87]" href="#legacy">Legacy</a>
+        <a class="hover:text-[#1f7c87]" href="#consultation">Consultation</a>
+        <a class="hover:text-[#1f7c87]" href="#contact">Contact</a>
+        <div class="pt-2 flex gap-3">
+          <button data-open-modal data-action="Quote" class="flex-1 btn btn-secondary btn-small">Get a quote</button>
+          <button data-open-modal data-action="Order" class="flex-1 btn btn-accent btn-small">Place order</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 grain"></div>
+      <div class="absolute -top-24 -left-32 w-[420px] h-[420px] rounded-full bg-[#2aa6b3]/20 blur-3xl floaty"></div>
+      <div class="absolute -bottom-32 -right-20 w-[520px] h-[520px] rounded-full bg-[#d98935]/20 blur-3xl floaty"></div>
+
+      <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 relative">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="rise-in">
+            <div class="chip chip-cyan">
+              <span class="w-2 h-2 rounded-full bg-[#2aa6b3]"></span>
+              Consistent grading. Reliable loads. Site-ready dispatch.
+            </div>
+
+            <h1 class="mt-5 text-4xl md:text-5xl font-bold leading-tight display-font">
+              Building with engineered sands & bricks that<br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1f7c87] to-[#d98935]">deliver strength on site</span>
+            </h1>
+
+            <p class="mt-4 text-lg text-[#4b5a64]">
+              Premium <span class="font-semibold">M-Sand</span>, <span class="font-semibold">P-Sand</span>, and <span class="font-semibold">bricks</span> from a legacy supplier in Tiruchirappalli.
+              Modernized plant, disciplined dispatch, dependable results.
+            </p>
+
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="#products" class="btn btn-primary">Explore products</a>
+              <button data-open-modal data-action="Quote" class="btn btn-secondary">Request quote</button>
+              <button data-open-modal data-action="Order" class="btn btn-accent">Place order</button>
+              <a class="btn btn-outline" href="tel:+919442229769">Call sales</a>
+            </div>
+
+            <div class="mt-9 grid grid-cols-3 gap-4">
+              <div class="surface-soft p-4">
+                <div class="text-2xl font-bold">1986</div>
+                <div class="text-xs text-[#5b6974]">Established</div>
+              </div>
+              <div class="surface-soft p-4">
+                <div class="text-2xl font-bold">1L+</div>
+                <div class="text-xs text-[#5b6974]">Loads supplied</div>
+              </div>
+              <div class="surface-soft p-4">
+                <div class="text-2xl font-bold">48 Hours</div>
+                <div class="text-xs text-[#5b6974]">Delivery</div>
+              </div>
+            </div>
+
+            <p class="mt-5 text-sm text-[#5b6974]">
+              For the fastest quote, share your site location and approximate quantity.
+            </p>
+          </div>
+
+          <div class="relative rise-in delay-2">
+            <div class="surface overflow-hidden">
+              <div class="p-6 md:p-7">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="text-sm text-[#5b6974]">Fast quote for contractors and homeowners</div>
+                    <div class="mt-1 text-2xl font-semibold display-font">Send one message, get pricing</div>
+                  </div>
+                  <div class="w-12 h-12 rounded-2xl bg-[#f7f2ea] border border-[#eadfce] flex items-center justify-center" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 7h18" />
+                      <path d="M7 7v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V7" />
+                      <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="mt-6 grid gap-3">
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="surface-soft p-4 rounded-2xl">
+                      <div class="text-sm font-semibold">M-Sand</div>
+                      <div class="text-xs text-[#5b6974] mt-1">Concrete-grade, cubical particles</div>
+                    </div>
+                    <div class="surface-soft p-4 rounded-2xl">
+                      <div class="text-sm font-semibold">P-Sand</div>
+                      <div class="text-xs text-[#5b6974] mt-1">Finely graded for plastering</div>
+                    </div>
+                    <div class="surface-soft p-4 rounded-2xl">
+                      <div class="text-sm font-semibold">Interlock bricks</div>
+                      <div class="text-xs text-[#5b6974] mt-1">Faster laying, cleaner finish</div>
+                    </div>
+                    <div class="surface-soft p-4 rounded-2xl">
+                      <div class="text-sm font-semibold">Red bricks</div>
+                      <div class="text-xs text-[#5b6974] mt-1">High-fired durability</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-3">
+                    <button data-open-modal data-action="Quote" class="flex-1 btn btn-secondary">Request quote</button>
+                    <button data-open-modal data-action="Order" class="flex-1 btn btn-accent">Place order</button>
+                  </div>
+
+                  <div class="text-xs text-[#5b6974]">
+                    Prefer calling? <a class="underline hover:text-[#1f7c87]" href="tel:+919080032002">+91 90800 32002</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-6 pb-7">
+                <div class="surface-tint p-4">
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-[#2aa6b3]/10 border border-[#2aa6b3]/20 flex items-center justify-center" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M12 2v6" />
+                        <path d="M12 22v-6" />
+                        <path d="M4.93 4.93l4.24 4.24" />
+                        <path d="M14.83 14.83l4.24 4.24" />
+                        <path d="M2 12h6" />
+                        <path d="M22 12h-6" />
+                        <path d="M4.93 19.07l4.24-4.24" />
+                        <path d="M14.83 9.17l4.24-4.24" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="text-sm font-semibold">Quality you can verify</div>
+                      <div class="text-xs text-[#5b6974] mt-1">
+                        Ask for grading details and product guidance based on your site needs.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof chips -->
+    <section class="border-y border-[#ddcdb8] bg-[#f3e9d9]">
+      <div class="max-w-6xl mx-auto px-4 py-10">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <div class="text-sm text-[#5b6974]">Trusted by builders, contractors, and homeowners across the region</div>
+          <div class="flex items-center gap-3 text-xs text-[#56616a]">
+            <span class="chip chip-sand">On-time loads</span>
+            <span class="chip chip-sand">Consistent grading</span>
+            <span class="chip chip-sand">Consultation support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="max-w-6xl mx-auto px-4 py-16">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <h2 class="text-3xl font-bold display-font">Our core products</h2>
+          <p class="mt-2 text-[#5b6974]">Engineered for strength, designed for a clean finish.</p>
+        </div>
+        <button data-open-modal data-action="Quote" class="btn btn-primary btn-small">Get today’s pricing</button>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-5">
+
+        <article data-product-card="msand" role="button" tabindex="0" class="product-card surface-soft p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-semibold display-font">Concrete M-Sand</h3>
+              <p class="mt-1 text-[#5b6974]">Eco-friendly alternative to river sand. Cubical particle shape for better compressive strength.</p>
+            </div>
+            <span class="chip chip-cyan">Concrete</span>
+          </div>
+          <ul class="mt-4 grid gap-2 text-sm text-[#3f4c56]">
+            <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Uniform grading for consistent mixing</li>
+            <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Improved workability and finish</li>
+            <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Ideal for RCC and concrete works</li>
+          </ul>
+          <div class="mt-6 flex gap-3 flex-wrap">
+            <button data-product-detail="msand" class="btn btn-soft btn-small">Technical details</button>
+            <button data-open-modal data-action="Quote" data-products="M-Sand" class="btn btn-secondary btn-small">Request quote</button>
+            <button data-open-modal data-action="Order" data-products="M-Sand" class="btn btn-accent btn-small">Order now</button>
+          </div>
+        </article>
+
+        <article data-product-card="psand" role="button" tabindex="0" class="product-card surface-soft p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-semibold display-font">Plastering P-Sand</h3>
+              <p class="mt-1 text-[#5b6974]">Finely graded for wall plastering. Helps reduce cracks and gives a smoother finish.</p>
+            </div>
+            <span class="chip chip-cyan">Plastering</span>
+          </div>
+          <ul class="mt-4 grid gap-2 text-sm text-[#3f4c56]">
+            <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Fine texture for clean trowel finish</li>
+            <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Lower paint consumption with smoother walls</li>
+            <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Suitable for internal and external plastering</li>
+          </ul>
+          <div class="mt-6 flex gap-3 flex-wrap">
+            <button data-product-detail="psand" class="btn btn-soft btn-small">Technical details</button>
+            <button data-open-modal data-action="Quote" data-products="P-Sand" class="btn btn-secondary btn-small">Request quote</button>
+            <button data-open-modal data-action="Order" data-products="P-Sand" class="btn btn-accent btn-small">Order now</button>
+          </div>
+        </article>
+
+        <article data-product-card="interlock" role="button" tabindex="0" class="product-card surface-soft p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-semibold display-font">Smart Interlock Bricks</h3>
+              <p class="mt-1 text-[#5b6974]">Self-locking bricks for faster laying and cleaner alignment. Great for efficient builds.</p>
+            </div>
+            <span class="chip chip-orange">Interlock</span>
+          </div>
+          <ul class="mt-4 grid gap-2 text-sm text-[#3f4c56]">
+            <li class="flex gap-2"><span class="text-[#d98935]">•</span>Reduced mortar use (project-dependent)</li>
+            <li class="flex gap-2"><span class="text-[#d98935]">•</span>Faster construction cycles</li>
+            <li class="flex gap-2"><span class="text-[#d98935]">•</span>Uniform edges and better finish</li>
+          </ul>
+          <div class="mt-6 flex gap-3 flex-wrap">
+            <button data-product-detail="interlock" class="btn btn-soft btn-small">Technical details</button>
+            <button data-open-modal data-action="Quote" data-products="Interlock Bricks" class="btn btn-secondary btn-small">Request quote</button>
+            <button data-open-modal data-action="Order" data-products="Interlock Bricks" class="btn btn-accent btn-small">Order now</button>
+          </div>
+        </article>
+
+        <article data-product-card="redbricks" role="button" tabindex="0" class="product-card surface-soft p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-semibold display-font">Chamber Red Bricks</h3>
+              <p class="mt-1 text-[#5b6974]">Classic high-fired red clay bricks for long-lasting builds and better insulation.</p>
+            </div>
+            <span class="chip chip-orange">Red Brick</span>
+          </div>
+          <ul class="mt-4 grid gap-2 text-sm text-[#3f4c56]">
+            <li class="flex gap-2"><span class="text-[#d98935]">•</span>Strong, durable, time-tested</li>
+            <li class="flex gap-2"><span class="text-[#d98935]">•</span>Thermal comfort and sound damping</li>
+            <li class="flex gap-2"><span class="text-[#d98935]">•</span>Ideal for residential and boundary walls</li>
+          </ul>
+          <div class="mt-6 flex gap-3 flex-wrap">
+            <button data-product-detail="redbricks" class="btn btn-soft btn-small">Technical details</button>
+            <button data-open-modal data-action="Quote" data-products="Chamber Red Bricks" class="btn btn-secondary btn-small">Request quote</button>
+            <button data-open-modal data-action="Order" data-products="Chamber Red Bricks" class="btn btn-accent btn-small">Order now</button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-10 p-6 rounded-3xl bg-gradient-to-r from-[#2aa6b3]/10 to-[#d98935]/10 border border-[#e1d2bf]">
+        <div class="flex items-start md:items-center justify-between gap-6 flex-wrap">
+          <div>
+            <div class="text-lg font-semibold display-font">Need help choosing?</div>
+            <div class="mt-1 text-[#5b6974]">Tell us your use-case and we will recommend the right grade, with a clean load estimate.</div>
+          </div>
+          <button data-open-modal data-action="Consultation" class="btn btn-primary">Talk to our team</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section id="why" class="bg-[#f1e6d6] border-y border-[#dfcfba]">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold display-font">Why builders choose us</h2>
+        <p class="mt-2 text-[#5b6974]">A simple promise: deliver what you ordered, consistently.</p>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-5">
+          <div class="surface-soft p-6">
+            <div class="text-lg font-semibold display-font">Consistent grading</div>
+            <p class="mt-2 text-sm text-[#5b6974]">Better mixes start with consistent material. We focus on uniform grading and dispatch-ready loads.</p>
+          </div>
+          <div class="surface-soft p-6">
+            <div class="text-lg font-semibold display-font">Reliable dispatch</div>
+            <p class="mt-2 text-sm text-[#5b6974]">Construction timelines are unforgiving. We keep communication crisp and deliveries dependable.</p>
+          </div>
+          <div class="surface-soft p-6">
+            <div class="text-lg font-semibold display-font">Material consultation</div>
+            <p class="mt-2 text-sm text-[#5b6974]">We can guide you on product selection, standards expectations, and cost-effective planning.</p>
+          </div>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-2 gap-5">
+          <div class="surface p-6">
+            <div class="text-lg font-semibold display-font">Who we serve</div>
+            <ul class="mt-3 grid gap-2 text-sm text-[#3f4c56]">
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Contractors and builders</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Ready-mix concrete suppliers</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Homeowners building or renovating</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Architects and consultants</li>
+            </ul>
+          </div>
+          <div class="surface p-6">
+            <div class="text-lg font-semibold display-font">What we can share</div>
+            <ul class="mt-3 grid gap-2 text-sm text-[#3f4c56]">
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Guidance on concrete vs plastering use</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Dispatch options and load planning</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Sample availability and site-fit suggestions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy -->
+    <section id="legacy" class="max-w-6xl mx-auto px-4 py-16">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold display-font">A legacy since 1986</h2>
+          <p class="mt-3 text-[#5b6974]">
+            A second-generation business carrying forward the legacy of Velusamy Karuppasamy.
+            Today, the company is led by Reshma Velusamy, combining modern efficiency with decades of trust.
+          </p>
+
+          <div class="mt-7 grid grid-cols-2 gap-4">
+            <div class="surface-soft p-5">
+              <div class="text-2xl font-bold">1,00,000+</div>
+              <div class="text-xs text-[#5b6974]">Loads supplied (milestone)</div>
+            </div>
+            <div class="surface-soft p-5">
+              <div class="text-2xl font-bold">Refurbished</div>
+              <div class="text-xs text-[#5b6974]">Modernized plant operations</div>
+            </div>
+          </div>
+
+          <div class="mt-7 flex gap-3 flex-wrap">
+            <button data-open-modal data-action="Quote" class="btn btn-primary">Start an enquiry</button>
+            <button data-open-modal data-action="Order" class="btn btn-accent">Place order</button>
+          </div>
+        </div>
+
+        <div class="surface p-6">
+          <div class="text-sm text-[#5b6974]">Founder spotlight</div>
+          <div class="mt-2 text-2xl font-semibold display-font">Reshma Velusamy</div>
+          <div class="mt-1 text-[#5b6974]">Founder and Visionary</div>
+          <div class="mt-5 p-5 rounded-2xl bg-[#f7f2ea] border border-[#eadfce]">
+            <div class="text-sm font-semibold display-font">What we care about</div>
+            <ul class="mt-3 grid gap-2 text-sm text-[#3f4c56]">
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Consistent quality for predictable results</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Clear communication and honest guidance</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Long-term trust, not one-time orders</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation -->
+    <section id="consultation" class="bg-gradient-to-b from-[#f1e6d6] to-[#f7f2ea] border-y border-[#dfcfba]">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-3xl font-bold display-font">Construction consultation</h2>
+            <p class="mt-3 text-[#5b6974]">
+              Leverage our experience to optimize material efficiency and structural integrity.
+              If you are unsure between grades, finishes, or load planning, we will help.
+            </p>
+            <ul class="mt-6 grid gap-2 text-sm text-[#3f4c56]">
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Material quality assessment</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Compliance expectations and checks</li>
+              <li class="flex gap-2"><span class="text-[#2aa6b3]">•</span>Cost-effective resource planning</li>
+            </ul>
+            <div class="mt-7 flex gap-3 flex-wrap">
+              <button data-open-modal data-action="Consultation" class="btn btn-primary">Book a session</button>
+              <a class="btn btn-outline" href="tel:+919442229769">Call us</a>
+            </div>
+          </div>
+
+          <div class="surface-soft p-6">
+            <div class="text-sm text-[#5b6974]">Quick checklist</div>
+            <div class="mt-2 text-lg font-semibold display-font">To get the fastest quote, share:</div>
+            <div class="mt-4 grid gap-3 text-sm text-[#3f4c56]">
+              <div class="p-4 rounded-2xl bg-white/80 border border-[#eadfce]">Products needed (you can select multiple)</div>
+              <div class="p-4 rounded-2xl bg-white/80 border border-[#eadfce]">Quantity: approximate loads or cubic meter</div>
+              <div class="p-4 rounded-2xl bg-white/80 border border-[#eadfce]">Site location: area + landmark</div>
+              <div class="p-4 rounded-2xl bg-white/80 border border-[#eadfce]">Timeline: delivery date window</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-[#f1e6d6] border-t border-[#dfcfba]">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 class="text-3xl font-bold display-font">Get in touch</h2>
+            <p class="mt-2 text-[#5b6974]">We respond quickly during business hours.</p>
+
+            <div class="mt-8 grid gap-4">
+              <div class="surface-soft p-5">
+                <div class="text-sm text-[#5b6974]">Location</div>
+                <div class="mt-1 font-semibold display-font">Reshma Industries</div>
+                <div class="mt-1 text-[#3f4c56]">
+                  16/164, Maniyarampatty, Pothapatty Post,<br />
+                  Mohanavur (S), Tiruchirappalli, Tamilnadu - 621304
+                </div>
+              </div>
+
+              <div class="surface-soft p-5">
+                <div class="text-sm text-[#5b6974]">Call</div>
+                <div class="mt-1 flex flex-wrap gap-3">
+                  <a class="underline hover:text-[#1f7c87]" href="tel:+919442229769">+91 94422 29769</a>
+                  <a class="underline hover:text-[#1f7c87]" href="tel:+919080032002">+91 90800 32002</a>
+                </div>
+              </div>
+
+              <div class="surface-soft p-5">
+                <div class="text-sm text-[#5b6974]">Email</div>
+                <a class="mt-1 underline hover:text-[#1f7c87] inline-block" href="mailto:contact@reshmaindustries.com">contact@reshmaindustries.com</a>
+              </div>
+
+              <div class="surface-soft p-5">
+                <div class="text-sm text-[#5b6974]">GST</div>
+                <div class="mt-1 font-mono text-[#3f4c56]">33EPXPR1734G1ZG</div>
+              </div>
+
+              <div class="surface-soft p-5">
+                <div class="text-sm text-[#5b6974]">Quick actions</div>
+                <div class="mt-3 flex flex-wrap gap-3">
+                  <button data-open-modal data-action="Quote" class="btn btn-primary">Get a quote</button>
+                  <button data-open-modal data-action="Order" class="btn btn-accent">Place order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="surface-soft p-6">
+            <div class="text-sm text-[#5b6974]">Map</div>
+            <div class="mt-5 rounded-2xl overflow-hidden border border-[#eadfce] bg-white/70">
+              <iframe
+                title="Reshma Industries map"
+                src="https://www.google.com/maps?q=Tiruchirappalli%20621304&output=embed"
+                width="100%"
+                height="360"
+                style="border:0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <footer class="mt-14 pt-8 border-t border-[#d9c9b4] text-sm text-[#6a7781] flex flex-wrap items-center justify-between gap-4">
+          <div>© <span id="year"></span> Reshma Industries. All rights reserved.</div>
+          <div class="flex items-center gap-4">
+            <a class="hover:text-[#1f7c87]" href="#products">Products</a>
+            <a class="hover:text-[#1f7c87]" href="#contact">Contact</a>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Product details modal -->
+  <div id="productModal" class="fixed inset-0 hidden z-50 overflow-y-auto overscroll-contain bg-black/50" aria-hidden="true">
+    <div id="productOverlay" class="absolute inset-0 bg-transparent"></div>
+
+    <div class="relative max-w-lg mx-auto px-4 py-10 min-h-[100dvh] flex items-start justify-center">
+      <div class="modal-surface w-full">
+        <div class="p-6 border-b border-[#eadfce] flex items-start justify-between gap-4">
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-[#8b7a68]">Technical details</div>
+            <div id="productTitle" class="mt-2 text-2xl font-semibold display-font">Product title</div>
+            <div id="productSubtitle" class="mt-1 text-sm text-[#5b6974]">Product subtitle</div>
+          </div>
+          <button id="closeProductBtn" class="w-10 h-10 rounded-xl bg-white/80 border border-[#eadfce] hover:bg-white" aria-label="Close">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+        <div class="p-6">
+          <div id="productSpecs" class="grid gap-3"></div>
+          <div id="productNote" class="mt-4 text-xs text-[#6a7781]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Quote / Order / Consultation -->
+  <div id="leadModal" class="fixed inset-0 hidden z-50 overflow-y-auto overscroll-contain bg-black/60" aria-hidden="true">
+    <div id="leadOverlay" class="absolute inset-0 bg-transparent"></div>
+
+    <div class="relative max-w-3xl mx-auto px-4 py-10 min-h-[100dvh] flex items-start justify-center">
+      <div class="modal-surface overflow-hidden">
+
+        <div class="p-6 md:p-7 border-b border-[#eadfce] flex items-start justify-between gap-4">
+          <div>
+            <div class="text-sm text-[#5b6974]">Reshma Industries</div>
+            <div class="mt-1 text-2xl font-semibold display-font">Send an enquiry</div>
+            <div class="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-[#eadfce] text-sm">
+              <span class="text-[#5b6974]">Action:</span>
+              <span id="actionBadge" class="font-semibold text-[#1f7c87]">Quote</span>
+            </div>
+          </div>
+          <button id="closeModalBtn" class="w-10 h-10 rounded-xl bg-white/80 border border-[#eadfce] hover:bg-white" aria-label="Close">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="p-6 md:p-7">
+          <form id="leadForm" class="grid md:grid-cols-2 gap-5" autocomplete="on">
+            <input type="hidden" name="action" id="actionInput" value="Quote" />
+
+            <label class="grid gap-2">
+              <span class="text-sm text-[#3f4c56]">Full name</span>
+              <input name="name" required class="px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]" placeholder="Your name" />
+            </label>
+
+            <label class="grid gap-2">
+              <span class="text-sm text-[#3f4c56]">Phone</span>
+              <input name="phone" required inputmode="tel" class="px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]" placeholder="+91" />
+            </label>
+
+            <div class="md:col-span-2">
+              <div class="text-sm text-[#3f4c56]">Products needed (select multiple)</div>
+              <div class="mt-3 grid sm:grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]">
+                  <input type="checkbox" name="products" value="M-Sand" class="accent-[#2aa6b3]" />
+                  <span>M-Sand</span>
+                </label>
+                <label class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]">
+                  <input type="checkbox" name="products" value="P-Sand" class="accent-[#2aa6b3]" />
+                  <span>P-Sand</span>
+                </label>
+                <label class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]">
+                  <input type="checkbox" name="products" value="Interlock Bricks" class="accent-[#2aa6b3]" />
+                  <span>Interlock Bricks</span>
+                </label>
+                <label class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]">
+                  <input type="checkbox" name="products" value="Chamber Red Bricks" class="accent-[#2aa6b3]" />
+                  <span>Chamber Red Bricks</span>
+                </label>
+                <label class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce] sm:col-span-2">
+                  <input type="checkbox" name="products" value="Consultation" class="accent-[#2aa6b3]" />
+                  <span>Consultation</span>
+                </label>
+              </div>
+              <div class="mt-2 text-xs text-[#6a7781]">Tip: You can select all products if needed.</div>
+            </div>
+
+            <label class="grid gap-2">
+              <span class="text-sm text-[#3f4c56]">Quantity</span>
+              <input name="qty" class="px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]" placeholder="Eg: 3 loads / 10 m³" />
+            </label>
+
+            <label class="grid gap-2">
+              <span class="text-sm text-[#3f4c56]">Delivery timeline</span>
+              <input name="timeline" class="px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]" placeholder="Eg: tomorrow / this week" />
+            </label>
+
+            <label class="grid gap-2 md:col-span-2">
+              <span class="text-sm text-[#3f4c56]">Site location</span>
+              <input name="location" class="px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]" placeholder="Area, city, landmark" />
+            </label>
+
+            <label class="grid gap-2 md:col-span-2">
+              <span class="text-sm text-[#3f4c56]">Notes (optional)</span>
+              <textarea name="notes" rows="4" class="px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]" placeholder="Concrete / plastering / wall work, vehicle access, etc"></textarea>
+            </label>
+
+            <div class="md:col-span-2">
+              <label class="grid gap-2">
+                <span class="text-sm text-[#3f4c56]">Generated message</span>
+                <textarea id="generatedMsg" readonly rows="6" class="px-4 py-3 rounded-2xl bg-white/80 border border-[#eadfce]"></textarea>
+              </label>
+              <div class="mt-3 flex flex-wrap gap-3">
+                <button id="copyMsgBtn" type="button" class="btn btn-outline btn-small">Copy message</button>
+                <a id="openWaBtn" class="btn btn-accent btn-small" href="#" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+                <button type="submit" class="btn btn-primary btn-small">Send via WhatsApp</button>
+              </div>
+              <div class="mt-2 text-xs text-[#6a7781]">
+                Note: Some mobile browsers open WhatsApp in the same tab/app and may ignore “new tab”. Desktop usually opens a new tab.
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP_PHONE = window.RI_WA_PHONE || '919442229769';
+
+    function waLink(message) {
+      return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+    }
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Modal elements
+    const leadModal = document.getElementById('leadModal');
+    const leadOverlay = document.getElementById('leadOverlay');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const actionBadge = document.getElementById('actionBadge');
+    const actionInput = document.getElementById('actionInput');
+
+    const productModal = document.getElementById('productModal');
+    const productOverlay = document.getElementById('productOverlay');
+    const closeProductBtn = document.getElementById('closeProductBtn');
+    const productTitle = document.getElementById('productTitle');
+    const productSubtitle = document.getElementById('productSubtitle');
+    const productSpecs = document.getElementById('productSpecs');
+    const productNote = document.getElementById('productNote');
+
+    const PRODUCT_DETAILS = {
+      msand: {
+        title: 'Concrete M-Sand',
+        subtitle: 'Manufactured sand for structural concrete',
+        specs: [
+          { label: 'Particle shape', value: 'Cubical, crushed aggregates for strength' },
+          { label: 'Grading', value: 'Consistent for concrete mix designs' },
+          { label: 'Fines control', value: 'Balanced to aid workability' },
+          { label: 'Best for', value: 'RCC, slabs, footings, beams' },
+          { label: 'Quality checks', value: 'Sieve analysis & moisture on request' }
+        ],
+        note: 'Exact values vary by batch; lab test reports and compliance data are available on request.'
+      },
+      psand: {
+        title: 'Plastering P-Sand',
+        subtitle: 'Fine sand for smooth, crack-resistant plaster',
+        specs: [
+          { label: 'Texture', value: 'Fine, smooth finish for walls' },
+          { label: 'Workability', value: 'Improves trowel finish and coverage' },
+          { label: 'Purity', value: 'Controlled silt and clay content' },
+          { label: 'Best for', value: 'Internal & external plastering' },
+          { label: 'Quality checks', value: 'Sieve analysis on request' }
+        ],
+        note: 'Exact values vary by batch; lab test reports and compliance data are available on request.'
+      },
+      interlock: {
+        title: 'Smart Interlock Bricks',
+        subtitle: 'Precision blocks for faster, cleaner alignment',
+        specs: [
+          { label: 'Dimensional accuracy', value: 'Uniform sizes for faster laying' },
+          { label: 'Edge geometry', value: 'Self-locking profiles for alignment' },
+          { label: 'Water absorption', value: 'Controlled for durability' },
+          { label: 'Best for', value: 'Compound walls, pavements, light structures' },
+          { label: 'Quality checks', value: 'Strength & absorption checks on request' }
+        ],
+        note: 'Exact values vary by batch; lab test reports and compliance data are available on request.'
+      },
+      redbricks: {
+        title: 'Chamber Red Bricks',
+        subtitle: 'Traditional fired clay bricks with lasting strength',
+        specs: [
+          { label: 'Firing', value: 'High-fired for strength and longevity' },
+          { label: 'Finish', value: 'Uniform size and clean edges' },
+          { label: 'Thermal comfort', value: 'Better insulation for structures' },
+          { label: 'Best for', value: 'Residential, boundary, load-bearing walls' },
+          { label: 'Quality checks', value: 'Strength & absorption checks on request' }
+        ],
+        note: 'Exact values vary by batch; lab test reports and compliance data are available on request.'
+      }
+    };
+
+    // iOS-friendly scroll lock helpers
+    let __riScrollY = 0;
+    function lockBodyScroll() {
+      __riScrollY = window.scrollY || 0;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${__riScrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.width = '100%';
+    }
+    function unlockBodyScroll() {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+      window.scrollTo(0, __riScrollY);
+    }
+
+    const form = document.getElementById('leadForm');
+    const generatedMsg = document.getElementById('generatedMsg');
+    const openWaBtn = document.getElementById('openWaBtn');
+    const copyMsgBtn = document.getElementById('copyMsgBtn');
+
+    function setCheckedProducts(products) {
+      const set = new Set(products);
+      document.querySelectorAll('input[name="products"]').forEach((cb) => {
+        cb.checked = set.has(cb.value);
+      });
+    }
+
+    function openModal(action, products = []) {
+      // Close mobile menu if open
+      mobileMenu?.classList.add('hidden');
+      mobileBtn?.setAttribute('aria-expanded', 'false');
+
+      actionBadge.textContent = action;
+      actionInput.value = action;
+
+      // If action is Consultation, auto-select Consultation product
+      if (action === 'Consultation') {
+        setCheckedProducts(['Consultation']);
+      } else if (products.length) {
+        // Keep existing checks and add selected ones
+        const currently = Array.from(document.querySelectorAll('input[name="products"]:checked')).map((x) => x.value);
+        setCheckedProducts(Array.from(new Set([...currently, ...products])));
+      }
+
+      // Show modal + lock background scroll
+      lockBodyScroll();
+      leadModal.classList.remove('hidden');
+      leadModal.setAttribute('aria-hidden', 'false');
+      refreshGenerated();
+
+      // Focus first field
+      const first = form.querySelector('input[name="name"]');
+      first?.focus();
+    }
+
+    function closeModal() {
+      leadModal.classList.add('hidden');
+      leadModal.setAttribute('aria-hidden', 'true');
+      unlockBodyScroll();
+    }
+
+    function buildMessage() {
+      const data = new FormData(form);
+      const action = String(data.get('action') || 'Quote').trim();
+      const name = String(data.get('name') || '').trim();
+      const phone = String(data.get('phone') || '').trim();
+      const qty = String(data.get('qty') || '').trim();
+      const timeline = String(data.get('timeline') || '').trim();
+      const location = String(data.get('location') || '').trim();
+      const notes = String(data.get('notes') || '').trim();
+
+      const products = Array.from(document.querySelectorAll('input[name="products"]:checked')).map((x) => x.value);
+
+      const lines = [
+        'Hi Reshma Industries,',
+        '',
+        `Action: ${action}`,
+        '',
+        'Customer details:',
+        `Name: ${name}`,
+        `Phone: ${phone}`,
+        '',
+        `Products: ${products.length ? products.join(', ') : 'Not selected'}`,
+        qty ? `Quantity: ${qty}` : null,
+        timeline ? `Timeline: ${timeline}` : null,
+        location ? `Site: ${location}` : null,
+        notes ? '' : null,
+        notes ? `Notes: ${notes}` : null
+      ].filter(Boolean);
+
+      // Real newline char without escape confusion
+      return lines.join(String.fromCharCode(10));
+    }
+
+    function refreshGenerated() {
+      const msg = buildMessage();
+      generatedMsg.value = msg;
+      openWaBtn.href = waLink(msg);
+    }
+
+    function openInNewTab(url) {
+      // Some browsers block window.open. Anchor-click is often more reliable.
+      const a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    function renderProductSpecs(items) {
+      productSpecs.innerHTML = '';
+      items.forEach((item) => {
+        const row = document.createElement('div');
+        row.className = 'p-3 rounded-2xl bg-white/80 border border-[#eadfce] flex items-start justify-between gap-4';
+        row.innerHTML = `
+          <div class="text-sm font-semibold">${item.label}</div>
+          <div class="text-sm text-[#5b6974] text-right">${item.value}</div>
+        `;
+        productSpecs.appendChild(row);
+      });
+    }
+
+    function openProductDetails(key) {
+      const data = PRODUCT_DETAILS[key];
+      if (!data) return;
+      productTitle.textContent = data.title;
+      productSubtitle.textContent = data.subtitle;
+      renderProductSpecs(data.specs || []);
+      productNote.textContent = data.note || '';
+
+      lockBodyScroll();
+      productModal.classList.remove('hidden');
+      productModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeProductDetails() {
+      productModal.classList.add('hidden');
+      productModal.setAttribute('aria-hidden', 'true');
+      unlockBodyScroll();
+    }
+
+    function shouldIgnoreCardClick(target) {
+      return !!(
+        target.closest('[data-open-modal]') ||
+        target.closest('a') ||
+        (target.closest('button') && !target.closest('[data-product-detail]'))
+      );
+    }
+
+    // Open modal triggers
+    document.querySelectorAll('[data-open-modal]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const action = btn.getAttribute('data-action') || 'Quote';
+        const productsStr = btn.getAttribute('data-products') || '';
+        const products = productsStr ? productsStr.split('|').map((s) => s.trim()).filter(Boolean) : [];
+        openModal(action, products);
+      });
+    });
+
+    // Product cards and detail triggers
+    document.querySelectorAll('[data-product-card]').forEach((card) => {
+      const key = card.getAttribute('data-product-card');
+      card.addEventListener('click', (e) => {
+        if (shouldIgnoreCardClick(e.target)) return;
+        openProductDetails(key);
+      });
+      card.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && key) {
+          e.preventDefault();
+          openProductDetails(key);
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-product-detail]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const key = btn.getAttribute('data-product-detail');
+        if (key) openProductDetails(key);
+      });
+    });
+
+    // Close modal actions
+    closeModalBtn?.addEventListener('click', closeModal);
+    leadOverlay?.addEventListener('click', closeModal);
+    closeProductBtn?.addEventListener('click', closeProductDetails);
+    productOverlay?.addEventListener('click', closeProductDetails);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !leadModal.classList.contains('hidden')) closeModal();
+      if (e.key === 'Escape' && !productModal.classList.contains('hidden')) closeProductDetails();
+    });
+
+    // Live update generated message
+    form?.addEventListener('input', refreshGenerated);
+    document.querySelectorAll('input[name="products"]').forEach((cb) => cb.addEventListener('change', refreshGenerated));
+
+    // Submit: open WhatsApp (best effort in new tab)
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      refreshGenerated();
+      try {
+        openInNewTab(openWaBtn.href);
+      } catch {
+        window.location.href = openWaBtn.href;
+      }
+    });
+
+    // Copy message
+    copyMsgBtn?.addEventListener('click', async () => {
+      try {
+        refreshGenerated();
+        await navigator.clipboard.writeText(generatedMsg.value);
+        const old = copyMsgBtn.textContent;
+        copyMsgBtn.textContent = 'Copied';
+        setTimeout(() => (copyMsgBtn.textContent = old), 1200);
+      } catch {
+        generatedMsg.focus();
+        generatedMsg.select();
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
